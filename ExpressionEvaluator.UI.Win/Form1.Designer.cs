@@ -37,19 +37,24 @@
             // display
             //
             display.BackColor = Color.FromArgb(0, 160, 0);
+            display.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             display.BorderStyle = BorderStyle.FixedSingle;
-            display.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            display.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             display.ForeColor = Color.White;
-            display.Location = new Point(5, 14);
+            display.Location = new Point(12, 14);
             display.Name = "display";
             display.ReadOnly = true;
-            display.Size = new Size(357, 47);
+            display.ScrollBars = ScrollBars.Horizontal;
+            display.Size = new Size(536, 39);
             display.TabIndex = 0;
             display.Text = string.Empty;
+            display.TextAlign = HorizontalAlignment.Right;
+            display.WordWrap = false;
             //
             // panel
             //
             panel.BackColor = Color.Black;
+            panel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel.ColumnCount = 6;
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.28571F));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.28571F));
@@ -57,14 +62,14 @@
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.28571F));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.42858F));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.42858F));
-            panel.Location = new Point(5, 95);
+            panel.Location = new Point(12, 72);
             panel.Name = "panel";
             panel.RowCount = 4;
             panel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             panel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             panel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             panel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            panel.Size = new Size(357, 433);
+            panel.Size = new Size(536, 441);
             panel.TabIndex = 1;
 
             AddButton("7", Color.WhiteSmoke, 0, 0, 1);
@@ -93,12 +98,10 @@
             //
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(367, 535);
+            ClientSize = new Size(560, 525);
             Controls.Add(panel);
             Controls.Add(display);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
+            MinimumSize = new Size(520, 520);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Functions Evaluator";
