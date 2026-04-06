@@ -45,7 +45,7 @@
             display.ReadOnly = true;
             display.Size = new Size(357, 47);
             display.TabIndex = 0;
-            display.Text = "144^(1/2)=12";
+            display.Text = string.Empty;
             //
             // panel
             //
@@ -119,6 +119,7 @@
             button.TabIndex = 0;
             button.Text = text;
             button.UseVisualStyleBackColor = false;
+            button.Click += OnButtonClick;
             panel.Controls.Add(button, column, row);
             if (columnSpan > 1)
             {
